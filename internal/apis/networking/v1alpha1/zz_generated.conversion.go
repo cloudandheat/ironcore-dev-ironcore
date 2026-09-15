@@ -1475,6 +1475,7 @@ func autoConvert_v1alpha1_NetworkSpec_To_networking_NetworkSpec(in *networkingv1
 	out.ProviderID = in.ProviderID
 	out.Peerings = *(*[]networking.NetworkPeering)(unsafe.Pointer(&in.Peerings))
 	out.PeeringClaimRefs = *(*[]networking.NetworkPeeringClaimRef)(unsafe.Pointer(&in.PeeringClaimRefs))
+	out.EnableEncryption = in.EnableEncryption
 	return nil
 }
 
@@ -1487,6 +1488,7 @@ func autoConvert_networking_NetworkSpec_To_v1alpha1_NetworkSpec(in *networking.N
 	out.ProviderID = in.ProviderID
 	out.Peerings = *(*[]networkingv1alpha1.NetworkPeering)(unsafe.Pointer(&in.Peerings))
 	out.PeeringClaimRefs = *(*[]networkingv1alpha1.NetworkPeeringClaimRef)(unsafe.Pointer(&in.PeeringClaimRefs))
+	out.EnableEncryption = in.EnableEncryption
 	return nil
 }
 
